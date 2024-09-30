@@ -78,10 +78,7 @@ firstChild.style.backgroundColor = "red";
 console.log(firstChild);
 const map = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"]; 
 function addToList(id){
-    for (let index = 0; index < map.length; index++) {
-        map[index].value = index; 
-        
-    }
+   
     let newElem = document.createElement("li");
     newElem.id = map[parent.children.length];
     newElem.className = "hot";
@@ -93,8 +90,9 @@ function addToList(id){
 
 function removeLastFromList(){
     parent = document.getElementsByTagName('ul')[0]; 
-    console.log(parent.lastChild);
+    
     parent.removeChild(parent.lastChild);  
+    parent.removeChild(parent.lastChild); 
 }
 
 function randomColor(){
@@ -103,8 +101,8 @@ function randomColor(){
     let randInt = Math.round(Math.random()*parent.children.length);
     let randElem = parent.children[randInt]; 
     console.log(randInt);
-    
-    randElem.style.backgroundColor = "yellow";
+    let randColor = Math.floor(Math.random()*16777215).toString(16);
+    randElem.style.backgroundColor = "#" + randColor;
 }
 
 function setBackgroundImage(url){
