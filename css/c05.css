@@ -4,7 +4,27 @@ body {
 	background-color: #000;
 	font-family: 'Oswald', 'Futura', sans-serif;
 	margin: 0; 
-	padding: 0;}
+	padding: 0;
+}
+
+button {
+	background-color: #333;
+	color: #7ee0c9;
+}
+
+input.swag {
+	
+	color: #7ee0c9;
+	background-color: #333;
+	
+}
+
+.center {
+	width: 40%;
+	margin: auto;
+	
+	
+}
 
 #page {
 	background-color: #403c3b;

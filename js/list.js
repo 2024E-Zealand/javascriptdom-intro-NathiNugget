@@ -2,6 +2,10 @@
 console.log("Skriv dit Javascript her");
 let a = document.getElementsByTagName("li");
 console.log(a);
+let body = document.getElementsByTagName('body')[0]
+body.style.fontFamily = "JetBrainsMono NF Regular";
+body.style.backgroundColor = "#A88905";
+document
 
 let isCool = true; 
 let isHidden = false; 
