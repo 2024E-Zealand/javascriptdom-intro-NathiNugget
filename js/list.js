@@ -7,13 +7,14 @@ let isCool = true;
 let isHidden = false; 
 function changeState(id){
     id = document.getElementById(id); 
+    let stateBtn = document.getElementById('stateBtn'); 
     if (isCool){
         id.className = "hot"; 
-        id.textContent = "Gør 3. element cool!";
+        stateBtn.textContent = "Gør 3. element cool!";
     }
     else {
-        id.textContent = "Gør 3. element hot!"; 
         id.className = "cool"; 
+        stateBtn.textContent = "Gør 3. element hot!"; 
     }
     isCool = !isCool; 
     console.log(isCool);
@@ -21,13 +22,14 @@ function changeState(id){
 
 function changeVisibility(id){
     id = document.getElementById(id); 
+    let visBtn = document.getElementById('visibilityBtn');
     if (!isHidden){
         id.style.visibility = "hidden"; 
-        id.textContent = "Gør 3. skjult!"; 
+        visBtn.textContent = "Gør 3. skjult!"; 
     }
     else {
         id.style.visibility = "visible"; 
-        id.textContent = "Gør 3. synlig!"; 
+        visBtn.textContent = "Gør 3. synlig!"; 
     }
     isHidden = !isHidden; 
 }
@@ -70,9 +72,8 @@ console.log(lastChild);
 
 firstChild.style.backgroundColor = "red";
 console.log(firstChild);
-
+const map = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"]; 
 function addToList(id){
-    let map = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"]; 
     for (let index = 0; index < map.length; index++) {
         map[index].value = index; 
         
@@ -85,6 +86,32 @@ function addToList(id){
     newElem.appendChild(textNode);
     parent.appendChild(newElem); 
 }
+
+function removeLastFromList(){
+    parent = document.getElementsByTagName('ul')[0]; 
+    console.log(parent.lastChild);
+    parent.removeChild(parent.lastChild);  
+}
+
+function randomColor(){
+    parent = document.getElementsByTagName('ul')[0];
+    
+    let randInt = Math.round(Math.random()*parent.children.length);
+    let randElem = parent.children[randInt]; 
+    console.log(randInt);
+    
+    randElem.style.backgroundColor = "yellow";
+}
+
+function setBackgroundImage(url){
+    let body = document.getElementsByTagName('body')[0];
+    let URL = document.getElementById(url).value
+    console.log(body);
+    
+    body.style.background = `URL(${URL})`;
+}
+
+
 
 
 console.log("slut på JavaScript");

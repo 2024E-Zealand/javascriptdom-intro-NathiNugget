@@ -17,11 +17,16 @@
       </ul>
     </div>
     <input type="text" id="inputText">
-    <button onclick="changeState('three')">Gør 3. element hot!</button>
-    <button onclick="changeVisibility('three')">Gør 3. skjult!</button>
+    <button onclick="changeState('three')" id="stateBtn">Gør 3. element hot!</button>
+    <button onclick="changeVisibility('three')" id="visibilityBtn">Gør 3. skjult!</button>
     <button onclick="addToList('inputText')">Add text to list!</button>
-    
+    <button onclick="removeLastFromList()">Remove last from list</button>
     <script src="js/list.js"></script>
+
+    <button onclick="randomColor()">Random color for a random line above!</button>
+    <br>
+    <input type="text" id="inputURL" placeholder="Input some URL here!">
+    <button onclick="setBackgroundImage('inputURL')">Set background!</button>
 
   </body>
 </html>
